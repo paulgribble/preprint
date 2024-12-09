@@ -3,13 +3,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-\usepackage{microtype}
-\usepackage[T1]{fontenc}
-
 %\usepackage{newtx}
-%\usepackage[scaled=0.92]{helvet}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[scaled=0.92]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
 
-\usepackage[margin=1.0in,includefoot,includehead]{geometry}
+\usepackage{amsmath}
+
+\usepackage[margin=1.0in,includefoot]{geometry}
 \usepackage{parskip}
 
 \usepackage{natbib}
@@ -20,12 +22,15 @@
 
 \usepackage{graphicx}
 \usepackage{float} 
-\usepackage[labelfont=bf,font=small]{caption}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage[labelfont={bf,sf},font={small,sf}]{caption}
 
 \usepackage{lineno}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\LARGE\bfseries\sffamily}
+\titleformat*{\subsection}{\Large\bfseries\sffamily}
+\titleformat*{\subsubsection}{\bfseries\sffamily}
+
 
 \renewcommand\Authfont{\fontsize{12}{16}\selectfont}
 \renewcommand\Affilfont{\fontsize{9}{13}\selectfont}
@@ -33,7 +38,7 @@
 \makeatletter
 \renewcommand{\maketitle}{
 \begin{flushleft}
-{\LARGE\bfseries\@title\par}
+{\huge\bfseries\sffamily\@title\par}
 \vspace{4ex}
 {\@author\par}
 \vspace{3ex}
