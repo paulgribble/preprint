@@ -13,23 +13,31 @@
 \usepackage[hidelinks]{hyperref}
 
 % MARGINS & SPACING
-\usepackage[margin=0.5in,includefoot,includehead]{geometry}
+\usepackage[left=0.75in,
+            right=0.75in,
+            top=.775in,
+            bottom=.6in,
+            includefoot,
+            includehead,
+            headsep=0.15in,
+            headheight=12.74524pt]{geometry}
 \usepackage{setspace}
-\setstretch{1.05}
+%\setstretch{1.05}
 \usepackage[bottom]{footmisc}
 \setlength{\skip\footins}{10mm}
 \usepackage[compact]{titlesec}
-\titleformat*{\section}{\normalsize\bfseries\scshape}
+\titleformat*{\section}{\normalsize\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 \titleformat*{\subsubsection}{\normalsize\bfseries}
-\titlespacing*{\section}{0pt}{3.0ex}{1.5ex}
-\titlespacing*{\subsection}{0pt}{1.0ex}{1.0ex}
-\titlespacing*{\subsubsection}{0pt}{1.0ex}{1.0ex}
+\titlespacing*{\section}{0pt}{2ex}{1ex}
+\titlespacing*{\subsection}{0pt}{1ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{1ex}{1ex}
 
 % BIBLIOGRAPHY
 \usepackage{natbib}
 \bibliographystyle{jneurophysiol}
 \setlength{\bibsep}{0pt plus 0.3ex}
+\def\bibfont{\small}
 
 % FIGURES/GRAPHICS
 \usepackage{graphicx}
@@ -43,13 +51,13 @@
 % HEADERS & FOOTERS
 \usepackage[twoside]{fancyhdr}
 \pagestyle{fancy}
-\fancyhead[C]{\scshape\@shorttitle}
-\fancyhead[OL]{\thepage}
+\fancyhead[C]{\hrule\vspace{1mm}\footnotesize\MakeUppercase\@shorttitle}
+\fancyhead[OL]{\footnotesize\thepage}
 \fancyhead[OR]{}
 \fancyhead[EL]{}
-\fancyhead[ER]{\thepage}
-\fancyfoot[C]{\small\itshape\@date}
-\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[ER]{\footnotesize\thepage}
+\fancyfoot[C]{\footnotesize\itshape\@date}
+\renewcommand{\headrulewidth}{0.0pt}
 
 % AUTHORS & AFFILIATIONS
 \usepackage{authblk}
@@ -73,5 +81,5 @@
 
 % CUSTOM ABSTRACT FORMAT
 \renewenvironment{abstract}
- {\par\noindent\textbf{\bfseries\abstractname}---\ignorespaces}
+ {\par\noindent\textbf{\bfseries\abstractname}\small---\ignorespaces}
  {}
